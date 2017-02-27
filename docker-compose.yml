@@ -1,0 +1,11 @@
+version: '2'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: .docker/${APP_ENV}.dockerfile
+    ports:
+      - "3000:3000"
+    env_file: .env/${APP_ENV}.env
+    volumes:
+      - .:/var/www/id8-web
