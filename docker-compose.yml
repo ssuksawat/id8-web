@@ -1,11 +1,11 @@
-version: '2'
+version: "3"
 services:
-  api:
+  web:
     build:
       context: .
-      dockerfile: .docker/${APP_ENV}.dockerfile
+      dockerfile: .docker/${APP_ENV:-development}.dockerfile
     ports:
-      - "3000:3000"
-    env_file: .env/${APP_ENV}.env
+      - 3000:3000
+    env_file: .env/${APP_ENV:-development}.env
     volumes:
       - .:/var/www/id8-web
