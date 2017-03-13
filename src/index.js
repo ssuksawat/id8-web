@@ -1,9 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+import './index.scss';
+import routes from './config/routes';
+import reducer from './config/reducer';
+import middleware, { sagaMiddleware } from './config/middleware';
+import rootSaga from './config/saga';
+
+const store = createStore(reducer, middleware);
+sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
-  <App />,
+  <Provider store={store}>
+    {routes}
+  </Provider>,
   document.getElementById('root')
 );
