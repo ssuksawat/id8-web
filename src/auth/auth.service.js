@@ -1,6 +1,4 @@
-import history from '../config/history';
-
-export {
+export const AuthService = {
   authenticate,
   register,
   logout,
