@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import './config/vendor';
 
-import './index.scss';
+import './index.css';
 import routes from './config/routes';
 import reducer from './config/reducer';
 import middleware, { sagaMiddleware } from './config/middleware';

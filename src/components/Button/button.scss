@@ -1,0 +1,37 @@
+@import "../../style/variables.scss";
+
+$btn-padding-wide-base: 20px;
+$btn-padding-wide-diff: 5px;
+$btn-fontsize-base:     16px;
+$btn-fontsize-diff:     2px;
+$btn-lineheight-base:   40px;
+$btn-lineheight-diff:   10px;
+
+.btn {
+  padding: 0 $btn-padding-wide-base;
+  min-width: 40px;
+  font-size: $btn-fontsize-base;
+  line-height: $btn-lineheight-base;
+  color: white;
+  background-color: $primary-color;
+  border: none;
+  border-radius: 4px;
+}
+
+/***** Sizes *****/
+
+.btn--sm {
+  padding: 0 #{$btn-padding-wide-base - $btn-padding-wide-diff};
+  font-size: $btn-fontsize-base - $btn-fontsize-diff;
+  line-height: $btn-lineheight-base - $btn-lineheight-diff;
+}
+.btn--lg {
+  padding: 0 #{$btn-padding-wide-base + $btn-padding-wide-diff};
+  font-size: $btn-fontsize-base + $btn-fontsize-diff;
+  line-height: $btn-lineheight-base + $btn-lineheight-diff;
+}
+.btn--xlg {
+  padding: 0 #{$btn-padding-wide-base + $btn-padding-wide-diff * 2};
+  font-size: $btn-fontsize-base + $btn-fontsize-diff * 2;
+  line-height: $btn-lineheight-base + $btn-lineheight-diff * 2;
+}
