@@ -1,0 +1,52 @@
+@import "../../style/_variables.scss";
+
+$input-padding-wide-base: 20px;
+$input-padding-wide-diff: 5px;
+$input-fontsize-base:     16px;
+$input-fontsize-diff:     2px;
+$input-lineheight-base:   40px;
+$input-lineheight-diff:   10px;
+
+.input {
+  padding: 0 $input-padding-wide-base;
+  color: $color-grey-darker;
+  font-size: $input-fontsize-base;
+  line-height: $input-lineheight-base;
+  border: 1px solid $color-grey-lighter;
+  border-radius: 4px;
+  transition: border-color .15s ease;
+}
+
+/***** Input States *****/
+
+.input:not([disabled]) {
+  &:hover { border-color: $color-grey; }
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+  }
+}
+.input[disabled] {
+  opacity: .7;
+}
+.input.is-error {
+  color: $color-red;
+  border-color: lighten($color-red, 10%);
+  &:hover,
+  &:focus {
+    border-color: $color-red;
+  }
+}
+
+/***** Input Sizes *****/
+
+.input--sm {
+  padding: 0 #{$input-padding-wide-base - $input-padding-wide-diff};
+  font-size: $input-fontsize-base - $input-fontsize-diff;
+  line-height: $input-lineheight-base - $input-lineheight-diff;
+}
+.input--lg {
+  padding: 0 #{$input-padding-wide-base + $input-padding-wide-diff};
+  font-size: $input-fontsize-base + $input-fontsize-diff;
+  line-height: $input-lineheight-base + $input-lineheight-diff;
+}

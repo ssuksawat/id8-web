@@ -1,0 +1,21 @@
+.story__page {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.story__list {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  list-style: none;
+}
+.story__list--horizontal {
+  flex-flow: row wrap;
+}
+
+.story__listItem {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
