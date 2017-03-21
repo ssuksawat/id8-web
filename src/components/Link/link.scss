@@ -1,0 +1,36 @@
+@import '../../style/_variables.scss';
+
+.link {
+  text-decoration: none;
+  transition: color .15s ease;
+}
+
+/***** Link Colors *****/
+
+.link--primary,
+.link--primary:visited {
+  color: $primary-color;
+
+  &:hover,
+  &:focus {
+    color: darken($primary-color, 10%);
+  }
+}
+.link--light,
+.link--light:visited {
+  color: $color-grey;
+
+  &:hover,
+  &:focus {
+    color: darken($color-grey, 20%);
+  }
+}
+.link--dark,
+.link--dark:visited {
+  color: $color-grey-darkest;
+
+  &:hover,
+  &:focus {
+    color: darken($color-grey-darkest, 10%);
+  }
+}

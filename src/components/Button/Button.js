@@ -27,9 +27,5 @@ const Button = (props) => {
     </button>
   );
 };
-Button.propTypes = {
-  children: React.PropTypes.string.isRequired,
-  onClick: React.PropTypes.func
-};
 
 export default Button;
