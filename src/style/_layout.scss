@@ -1,0 +1,26 @@
+$margin-base: 4px;
+$margin-diff: 4px;
+$padding-base: 4px;
+$padding-diff: 4px;
+
+$sizes: (
+  'xs': 0,
+  'sm': 1,
+  'md': 2,
+  'lg': 3,
+  'xlg': 4
+);
+
+@each $size, $multiplier in $sizes {
+  .margin-#{$size}       { margin: $margin-base + ($margin-diff * $multiplier); }
+  .marginTop-#{$size}    { margin-top: $margin-base + ($margin-diff * $multiplier); }
+  .marginRight-#{$size}  { margin-right: $margin-base + ($margin-diff * $multiplier); }
+  .marginBottom-#{$size} { margin-bottom: $margin-base + ($margin-diff * $multiplier); }
+  .marginLeft-#{$size}   { margin-left: $margin-base + ($margin-diff * $multiplier); }
+
+  .padding-#{$size}       { padding: $padding-base + ($padding-diff * $multiplier); }
+  .paddingTop-#{$size}    { padding-top: $padding-base + ($padding-diff * $multiplier); }
+  .paddingRight-#{$size}  { padding-right: $padding-base + ($padding-diff * $multiplier); }
+  .paddingBottom-#{$size} { padding-bottom: $padding-base + ($padding-diff * $multiplier); }
+  .paddingLeft-#{$size}   { padding-left: $padding-base + ($padding-diff * $multiplier); }
+}

@@ -1,0 +1,39 @@
+@import "./_variables.scss";
+
+$colorsSolid: (
+  black: $color-black,
+  white: white
+);
+
+$colorsWithShades: (
+  blue:     $color-blue,
+  grey:     $color-grey,
+  red:      $color-red,
+  primary:  $primary-color
+);
+
+@each $color, $value in $colorsSolid {
+  .color-#{$color}     { color: $value; }
+  .bgColor-#{$color}   { background-color: $value; }
+  .brdrColor-#{$color} { border-color: $value; }
+}
+
+@each $color, $value in $colorsWithShades {
+  .color-#{$color}         { color: $value; }
+  .color-#{$color}Lighter  { color: lighten($value, 10%); }
+  .color-#{$color}Lightest { color: lighten($value, 20%); }
+  .color-#{$color}Darker   { color: darken($value, 10%); }
+  .color-#{$color}Darkest  { color: darken($value, 20%); }
+
+  .bgColor-#{$color}         { background-color: $value; }
+  .bgColor-#{$color}Lighter  { background-color: lighten($value, 10%); }
+  .bgColor-#{$color}Lightest { background-color: lighten($value, 20%); }
+  .bgColor-#{$color}Darker   { background-color: darken($value, 10%); }
+  .bgColor-#{$color}Darkest  { background-color: darken($value, 20%); }
+
+  .brdrColor-#{$color}         { border-color: $value; }
+  .brdrColor-#{$color}Lighter  { border-color: lighten($value, 10%); }
+  .brdrColor-#{$color}Lightest { border-color: lighten($value, 20%); }
+  .brdrColor-#{$color}Darker   { border-color: darken($value, 10%); }
+  .brdrColor-#{$color}Darkest  { border-color: darken($value, 20%); }
+}

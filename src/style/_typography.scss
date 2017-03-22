@@ -1,0 +1,32 @@
+$fontSize-base: 1.5rem;
+$fontSize-diff: .25rem;
+
+/***** Font Sizes *****/
+
+.fontSize-xxs { font-size: $fontSize-base - $fontSize-diff * 3; }
+.fontSize-xs  { font-size: $fontSize-base - $fontSize-diff * 2; }
+.fontSize-sm  { font-size: $fontSize-base - $fontSize-diff * 1; }
+.fontSize-md  { font-size: $fontSize-base; }
+.fontSize-lg  { font-size: $fontSize-base + $fontSize-diff * 1; }
+.fontSize-xlg { font-size: $fontSize-base + $fontSize-diff * 2; }
+
+h1,
+.h1 { @extend .fontSize-xlg; }
+h2,
+.h2 { @extend .fontSize-lg; }
+h3,
+.h3 { @extend .fontSize-md; }
+h4,
+.h4 { @extend .fontSize-sm; }
+h5,
+.h5 { @extend .fontSize-xs; }
+h6,
+.h6 { @extend .fontSize-xxs; }
+
+/***** Font Weights *****/
+
+@for $i from 1 through 10 {
+  .fontWeight-#{$i} {
+    font-weight: $i * 100;
+  }
+}
