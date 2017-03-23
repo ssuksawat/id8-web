@@ -57,3 +57,9 @@ $sidebar-width: 300px;
 $zindex-top:         10;
 $zindex-top-higher:  100;
 $zindex-top-highest: 1000;
+
+/* ----- Animation Timing Functions ----- */
+
+$timing-bouncy:   cubic-bezier(.69,.05,.29,1.33);
+$timing-bouncy-2: cubic-bezier(.86,-0.27,.29,1.33);
+$timing-bouncy-3: cubic-bezier(.81,-0.28,.45,1.44);

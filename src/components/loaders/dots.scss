@@ -1,0 +1,41 @@
+@import "../../style/_variables.scss";
+
+$dot-base: 4px;
+$dot-diff: 2px;
+
+.loadingDots {
+  display: inline-flex;
+  align-items: center;
+}
+.loadingDots > .dot {
+  margin: 0 (($dot-base + ($dot-diff * 1)) / 2);
+  width:  $dot-base + ($dot-diff * 1);
+  height: $dot-base + ($dot-diff * 1);
+  border-radius: 50%;
+  background-color: white;
+  animation: BOUNCY_DOT 1s cubic-bezier(.52,.14,.07,1.37) infinite;
+}
+.loadingDots--sm > .dot {
+  margin: 0 (($dot-base + ($dot-diff * 0)) / 2);
+  width:  $dot-base + ($dot-diff * 0);
+  height: $dot-base + ($dot-diff * 0);
+}
+.loadingDots--lg > .dot {
+  margin: 0 (($dot-base + ($dot-diff * 2)) / 2);
+  width:  $dot-base + ($dot-diff * 2);
+  height: $dot-base + ($dot-diff * 2);
+}
+.loadingDots--dark > .dot { background-color: $color-grey-darkest; }
+.loadingDots > .dot:nth-child(2) {
+  animation-delay: -.8s;
+}
+.loadingDots > .dot:last-child {
+  animation-delay: -0.6s;
+}
+
+@keyframes BOUNCY_DOT {
+  0%   { transform: translateY(0); }
+  33%  { transform: translateY(-250%); }
+  66%  { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}
