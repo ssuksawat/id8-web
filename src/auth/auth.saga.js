@@ -1,6 +1,6 @@
 import { call, cancel, fork, put, take } from 'redux-saga/effects';
 import { LOGIN_REQUEST, LOGOUT, SIGNUP_REQUEST, AUTH_SUCCESS, AUTH_ERROR } from './auth.action';
-import * as AuthService from './auth.service';
+import AuthService from './auth.service';
 
 export function* login(credentials) {
   try {

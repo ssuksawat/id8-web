@@ -1,4 +1,4 @@
-export const AuthService = {
+export default {
   authenticate,
   register,
   logout,
@@ -7,7 +7,7 @@ export const AuthService = {
 
 /***** PUBLIC *****/
 
-function authenticate({ email, password }) {
+export function authenticate({ email, password }) {
   return fetch('/auth/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -17,7 +17,7 @@ function authenticate({ email, password }) {
   .then(storeAuth);
 }
 
-function register({ fullName, email, password }) {
+export function register({ fullName, email, password }) {
   return fetch('/auth/signup', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -27,11 +27,11 @@ function register({ fullName, email, password }) {
   .then(storeAuth);
 }
 
-function logout() {
+export function logout() {
   clearAuth();
 }
 
-function isAuthenticated() {
+export function isAuthenticated() {
   return localStorage.getItem('token');
 }
 
