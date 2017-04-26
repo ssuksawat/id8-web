@@ -24,10 +24,10 @@
   "scripts": {
     "start": "react-scripts start",
     "start:dev": "npm start & npm run watch-css",
-    "build": "npm run build:css && npm run build:js",
-    "build:js": "NODE_PATH=src/ react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "build": "npm run build:css && npm run build:js",
+    "build:js": "NODE_PATH=src/ react-scripts build",
     "build:css": "node-sass src/ -o src/",
     "watch:css": "npm run build:css && node-sass src/ -o src/ --watch",
     "storybook": "start-storybook -p 9009 -s public",

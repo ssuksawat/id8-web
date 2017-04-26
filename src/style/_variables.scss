@@ -12,32 +12,39 @@ $color-cyan-lightest: #dff2f5;
 $color-cyan-darker:   #3db0c0;
 $color-cyan-darkest:  #2a7a84;
 
+$color-bright-green:          #33E2D1;
+$color-bright-green-lighter:  lighten(#33E2D1, 10%);
+$color-bright-green-lightest: lighten(#33E2D1, 20%);
+$color-bright-green-darker:   darken(#33E2D1, 10%);
+$color-bright-green-darkest:  darken(#33E2D1, 20%);
+
 $color-marine-green:          #57bc90;
 $color-marine-green-lighter:  #8fd2b5;
 $color-marine-green-lightest: #d5eee3;
 $color-marine-green-darker:   #43a97c;
 $color-marine-green-darkest:  #327e5d;
 
-$color-grey:           #A5A5AF;
-$color-grey-lighter:   #EEEEEE;
-$color-grey-lightest:  #F5F5F5;
-$color-grey-darker:    #616161;
-$color-grey-darkest:   #212121;
 
-$color-black: $color-grey-darkest;
+$color-grey-lighter:   lighten(#37383C, 60%);
+$color-grey-lightest:  lighten(#37383C, 80%);
+$color-grey:           lighten(#37383C, 40%);
+$color-grey-darker:    lighten(#37383C, 20%);
+$color-grey-darkest:   #37383C;
+
+$color-black: #212121;
 
 $color-red:            #F44336;
 $color-red-darker:     #D32F2F;
 $color-red-darkest:    #B71C1C;
 
-$primary-color:      $color-blue;
-$primary-color-1:    $color-blue-lightest;
-$primary-color-2:    $color-blue-darkest;
-$primary-color-3:    $color-blue-lighter;
-$accent-color:       $color-cyan;
-$accent-color-1:     $color-cyan-lightest;
-$accent-color-2:     $color-cyan-darker;
-$accent-color-3:     $color-cyan-darkest;
+$primary-color:      $color-bright-green;
+$primary-color-1:    $color-bright-green-lightest;
+$primary-color-2:    $color-bright-green-darkest;
+$primary-color-3:    $color-bright-green-lighter;
+$accent-color:       $color-blue;
+$accent-color-1:     $color-blue-lightest;
+$accent-color-2:     $color-blue-darker;
+$accent-color-3:     $color-blue-darkest;
 
 /* ----- RESPONSIVE Variables ----- */
 
