@@ -21,7 +21,7 @@ storiesOf('Loaders', module)
       <ListItem>
         <h5>Large dots</h5>
         <Dots large dark />
-        <pre>{'<Dots small dark />'}</pre>
+        <pre>{'<Dots large dark />'}</pre>
       </ListItem>
     </List>
   ));
